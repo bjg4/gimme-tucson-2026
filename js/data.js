@@ -26,7 +26,7 @@ window.TUCSON = {
     {id:"E11", title:"Carb fueling", claim:"60–90 g CHO/h for efforts >~2.5 h; gut trainable (~2 wk ↓ discomfort ~47%).", source:"ACSM 2016 · Jeukendrup 2017 · Martinez 2023", conf:"strong", detail:"Race target 60–90 g/h on long + MP — not elite 120 unless gut-trained."},
     {id:"E12", title:"Strength / plyos", claim:"~2×/wk heavy RT ± plyos improve economy. Do not oversell injury prevention.", source:"Blagrove 2018 SR · 2024 RE/RRI MAs", conf:"mod-strong", detail:"Economy/TT determinants improve; VO2max typically unchanged. RRI prevention: no clear pooled reduction."},
     {id:"E13", title:"HRV / Oura gating", claim:"HRV-guided intensity can improve VO2max vs fixed plans. Never red-smash for ego.", source:"Granero-Gallegos HRV MA · Walsh 2021 · COACH_LOOP", conf:"mod-strong", detail:"Combine Oura readiness + Body Battery + RPE. Red = rest or easy jog."},
-    {id:"E14", title:"Injury risk & goal jumps", claim:"~190 lb × rising mpw + 13-min PR→A jump = protect tissues; don’t buy 3:15 with tendon debt.", source:"van Poppel SR · Nielsen · Damsted", conf:"moderate", detail:"Abort-up to B if recurring niggle, 2 failed key sessions, or red streak ≥3 days."},
+    {id:"E14", title:"Injury risk & goal jumps", claim:"~136 lb × rising mpw + 13-min PR→A jump = protect tissues; don’t buy 3:15 with tendon debt.", source:"van Poppel SR · Nielsen · Damsted", conf:"moderate", detail:"Abort-up to B if recurring niggle, 2 failed key sessions, or red streak ≥3 days."},
     {id:"E15", title:"Midweek medium-long", claim:"MLR 10–14 midweek + long supports volume without one-day overload.", source:"Pfitzinger Advanced Marathoning", conf:"expert", detail:"Zero MLR≥10 across all prior Blake builds — the Tucson volume unlock."}
   ],
   races: {
