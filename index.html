@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tucson Marathon 2026 · Sub-3:15 · Potato Coach</title>
+<meta name="description" content="Blake Graham — Tucson Marathon Dec 13 2026 evidence-based sub-3:15 stretch plan. Interactive Potato coach dashboard."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&amp;family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/site.css"/>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js" defer></script>
+<script src="js/data.js" defer></script>
+<script src="js/hero.js" defer></script>
+<script src="js/app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span> Tucson <em>′26</em></a>
+    <div class="nav-links">
+      <a href="#goals">Goals</a>
+      <a href="#volume">Volume</a>
+      <a href="#plan">Plan</a>
+      <a href="#course">Course</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#postmortem">Postmortem</a>
+      <a href="#rules">Rules</a>
+      <a href="#registration">Reg</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-veil"></div>
+  <div class="hero-content">
+    <div class="pill"><span class="live"></span> Potato coach · Dec 13 2026</div>
+    <h1>Sonoran night.<br/><span class="ital">Sub-3:15 stretch.</span></h1>
+    <p class="hero-sub">Biosphere 2 → PCC Northwest. Thirteen weeks of honest goals, midweek volume, and evidence Blake can defend.</p>
+    <div class="goal-strip">
+      <article class="goal a">
+        <div class="goal-k">A · Stretch</div>
+        <div class="goal-t">Sub 3:15</div>
+        <div class="goal-p">7:26 / mi</div>
+        <div class="goal-r">Only if peak MP longs + fueling + green recovery land</div>
+      </article>
+      <article class="goal b">
+        <div class="goal-k">B · Primary</div>
+        <div class="goal-t">Under 3:22</div>
+        <div class="goal-p">7:42 / mi</div>
+        <div class="goal-r">Honest win if fitness builds cleanly</div>
+      </article>
+      <article class="goal c">
+        <div class="goal-k">C · Floor</div>
+        <div class="goal-t">Beat 3:27:53</div>
+        <div class="goal-p">~7:55 / mi</div>
+        <div class="goal-r">Defend Eugene — never worse than the floor</div>
+      </article>
+    </div>
+    <div class="meta-row">
+      <span><strong>Athlete</strong> Blake J. Graham · ~190 lb</span>
+      <span><strong>Build</strong> Sep 14 → Dec 13</span>
+      <span><strong>Course</strong> Net −1,493 ft</span>
+      <span><strong>Start</strong> 7:20 AM Aravaipa</span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="block wrap" id="goals">
+  <div class="eyebrow">01 · Goals &amp; pace anchors</div>
+  <h2 class="display">Honesty first, then the dials</h2>
+  <p class="lede">Daniels tables: Shamrock HM 1:38:51 ≈ VDOT 46–47; Eugene 3:27:53 ≈ 44–45; marathon 3:15 ≈ 47. Net downhill helps the clock — it does not erase physiology or the Eugene→goal gap.</p>
+  <div class="panel panel-tight" style="margin-bottom:1.25rem">
+    <div style="overflow-x:auto">
+      <table class="v-table">
+        <thead><tr><th>Result</th><th>Time</th><th>VDOT ≈</th><th>Implication</th></tr></thead>
+        <tbody>
+          <tr><td>Shamrock HM · Mar 15</td><td class="mono">1:38:51</td><td class="mono">46–47</td><td>Aerobic speed is decent</td></tr>
+          <tr><td>Eugene Marathon · Apr 26</td><td class="mono">3:27:53</td><td class="mono">44–45</td><td>Durability lagged HM equivalence</td></tr>
+          <tr><td>Goal 3:15</td><td class="mono">7:26/mi</td><td class="mono">~47</td><td>Top of band with perfect specific prep</td></tr>
+          <tr><td>Goal 3:22</td><td class="mono">7:42/mi</td><td class="mono">45–46</td><td>Closer to race-proven fitness</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="pace-row">
+    <div class="pace"><div class="pace-z">E · Easy</div><div class="pace-v">8:45–9:30</div><div class="pace-d">Conversational — don't race easies</div></div>
+    <div class="pace"><div class="pace-z">M_B</div><div class="pace-v">7:42</div><div class="pace-d">Primary MP early specific</div></div>
+    <div class="pace"><div class="pace-z">M_A</div><div class="pace-v">7:26</div><div class="pace-d">Late peak only when earned</div></div>
+    <div class="pace"><div class="pace-z">T · Threshold</div><div class="pace-v">7:05–7:20</div><div class="pace-d">Tempo / cruise</div></div>
+    <div class="pace"><div class="pace-z">I · Interval</div><div class="pace-v">6:30–6:45</div><div class="pace-d">Short VO2 &le;1–2×/wk</div></div>
+  </div>
+</section>
+<section class="block wrap" id="volume">
+  <div class="eyebrow">02 · Volume philosophy</div>
+  <h2 class="display">50–55 without Sunday heroics</h2>
+  <p class="lede">Every prior build never hit 50 mpw and logged <strong>zero</strong> midweek MLR ≥10. Tucson spreads load: Wed MLR 10–14, long capped at 20, peak band 50–55.</p>
+  <div class="stat-grid">
+    <div class="stat"><div class="stat-l">Weekly target</div><div class="stat-n">50–55</div><div class="stat-h">mpw peak band</div></div>
+    <div class="stat"><div class="stat-l">Long cap</div><div class="stat-n">20 mi</div><div class="stat-h">≈29–32 km consensus</div></div>
+    <div class="stat"><div class="stat-l">Wed MLR</div><div class="stat-n">10–14</div><div class="stat-h">Volume via midweek</div></div>
+    <div class="stat"><div class="stat-l">Ramp rule</div><div class="stat-n">≤10%</div><div class="stat-h">Ban &gt;25–30% jumps</div></div>
+  </div>
+  <div class="panel">
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.35rem">
+      <strong style="font-size:0.9rem">Planned weekly volume</strong>
+      <span style="font-size:0.75rem;color:var(--sand-mute)">Click a point to jump the timeline</span>
+    </div>
+    <div class="chart-box"><canvas id="volChart" aria-label="Weekly volume chart"></canvas></div>
+  </div>
+</section>
+
+<section class="block wrap" id="plan">
+  <div class="eyebrow">03 · Week-by-week</div>
+  <h2 class="display">Scrub the build</h2>
+  <p class="lede">Interactive 13-week skeleton — phase, mpw band, long, and the session that matters. Wedding week (Sep 8–13) is protect-only before W1.</p>
+  <div class="panel timeline-shell">
+    <div class="phase-pills" id="phase-pills">
+      <button type="button" class="phase-pill" data-phase="Base">Base</button>
+      <button type="button" class="phase-pill" data-phase="Specific">Specific</button>
+      <button type="button" class="phase-pill" data-phase="Peak">Peak</button>
+      <button type="button" class="phase-pill" data-phase="Taper">Taper</button>
+      <button type="button" class="phase-pill" data-phase="Race">Race</button>
+    </div>
+    <div class="week-track">
+      <div class="week-rail" id="week-rail" role="listbox" aria-label="Training weeks"></div>
+      <input class="scrub" id="week-scrub" type="range" min="0" max="12" value="0" aria-label="Scrub weeks 1 to 13"/>
+    </div>
+    <div class="week-detail" id="week-detail"></div>
+  </div>
+  <div class="viz-frame">
+    <img src="assets/plan-viz.jpg" alt="Tucson 2026 week-by-week training plan visualization" width="1100" height="600" loading="lazy"/>
+    <div class="caption">Static plan viz — volume bands, long-run MP insertion, quality emphasis</div>
+  </div>
+</section>
+
+<section class="block wrap" id="course">
+  <div class="eyebrow">04 · Course awareness</div>
+  <h2 class="display">How Tucson actually feels</h2>
+  <p class="lede">Point-to-point Biosphere 2 → Cañada del Oro bike path (~mi 18) → PCC Northwest. BQ-friendly net downhill — mile 1 is uphill, and the last 8 collect the bill.</p>
+  <div class="tabs" id="map-tabs" role="tablist">
+    <button type="button" class="tab active" data-map="hybrid" role="tab" aria-selected="true">Hybrid</button>
+    <button type="button" class="tab" data-map="topo" role="tab">Topo</button>
+    <button type="button" class="tab" data-map="osm" role="tab">OSM</button>
+    <button type="button" class="tab" data-map="elev" role="tab">Elevation</button>
+  </div>
+  <div class="map-stage">
+    <div class="map-pane active" id="map-hybrid"><img src="assets/caltopo-clean.jpg" alt="CalTopo clean hybrid course map" loading="lazy"/><div class="caption"><strong>Hybrid</strong> — Biosphere 2 start → Oro Valley finish</div></div>
+    <div class="map-pane" id="map-topo"><img src="assets/caltopo-topo.jpg" alt="CalTopo topographic course map" loading="lazy"/><div class="caption"><strong>Topo</strong> — Catalina foothills corridor and highway plunge</div></div>
+    <div class="map-pane" id="map-osm"><img src="assets/course-overlay-osm.jpg" alt="Course overlay on OpenStreetMap" loading="lazy"/><div class="caption"><strong>OSM</strong> — AZ-77 shoulder → The Loop bike path</div></div>
+    <div class="map-pane elev" id="map-elev"><img src="assets/course-elevation-profile.jpg" alt="Tucson Marathon elevation profile" loading="lazy"/><div class="caption"><strong>Elevation</strong> — net −1,493 ft · +292 ft · max 3,969 ft</div></div>
+  </div>
+  <div class="tldr">
+    <div class="tldr-item"><span class="tldr-n">1</span><div><strong>Mile 1 is a trap the other way</strong><p>Uphill / rollers — pacers plan ~1:00 slower. Marathon pace here = early HR spike.</p></div></div>
+    <div class="tldr-item"><span class="tldr-n">2</span><div><strong>Gravity tax is front-loaded</strong><p>After ~mi 2.8 onto AZ-77, sustained downhill. Quads collect interest by halfway.</p></div></div>
+    <div class="tldr-item"><span class="tldr-n">3</span><div><strong>Highway monotony ≈ mi 3–18</strong><p>Shoulder, rumble strips, live traffic, sparse spectators. Mental game over scenery.</p></div></div>
+    <div class="tldr-item"><span class="tldr-n">4</span><div><strong>Bike path is not a free ride</strong><p>Mi 18–26.2 feels flat vs the plunge; bridge bumps + sun. Classic positive-split zone.</p></div></div>
+    <div class="tldr-item"><span class="tldr-n">5</span><div><strong>Heat beats December cool</strong><p>Start 40s–low 50s; finish can hit 70s–80s. Dry solar load = late fade.</p></div></div>
+    <div class="tldr-item"><span class="tldr-n">6</span><div><strong>BQ is real if disciplined</strong><p>~17% BQ in 2025. Sub-3:15 fails most from early freewheeling — not not enough downhill.</p></div></div>
+  </div>
+  <div class="feel-row">
+    <div class="feel"><div class="feel-m">Mi 0–2.8</div><h4>Biosphere rollers</h4><p>Controlled warm-up. Use the climb as a natural brake.</p></div>
+    <div class="feel"><div class="feel-m">Mi 3–16</div><h4>Smooth under goal</h4><p>Effort discipline — not smash. Soft legs, fuel on schedule.</p></div>
+    <div class="feel"><div class="feel-m">Mi 16–20</div><h4>Protect chassis</h4><p>Hold form into the path transition. Shorten stride on downs.</p></div>
+    <div class="feel"><div class="feel-m">Mi 20–26.2</div><h4>Earned race</h4><p>What's left after you didn't trash the quads early.</p></div>
+  </div>
+</section>
+<section class="block wrap" id="evidence">
+  <div class="eyebrow">05 · Evidence map</div>
+  <h2 class="display">What the plan is betting on</h2>
+  <p class="lede">Filter by confidence or expand an E## card for claim detail, source, and coach takeaway.</p>
+  <div class="filters" id="ev-filters">
+    <button type="button" class="filter-btn active" data-conf="all">All</button>
+    <button type="button" class="filter-btn" data-conf="strong">Strong</button>
+    <button type="button" class="filter-btn" data-conf="mod-strong">Mod–strong</button>
+    <button type="button" class="filter-btn" data-conf="moderate">Moderate</button>
+    <button type="button" class="filter-btn" data-conf="expert">Expert</button>
+  </div>
+  <div class="ev-list" id="ev-list"></div>
+</section>
+
+<section class="block wrap" id="postmortem">
+  <div class="eyebrow">06 · Marathon postmortem</div>
+  <h2 class="display">Four builds → one PR pattern</h2>
+  <p class="lede">Toggle races to compare Strava-synced 12-week windows. Eugene broke through despite never hitting 50 mpw and zero midweek MLRs.</p>
+  <div class="race-toggles" id="race-toggles">
+    <button type="button" class="race-tog" data-race="debut">Debut</button>
+    <button type="button" class="race-tog" data-race="newport">Newport</button>
+    <button type="button" class="race-tog" data-race="portland">Portland</button>
+    <button type="button" class="race-tog" data-race="eugene">Eugene PR</button>
+  </div>
+  <div class="compare-grid" id="compare-grid"></div>
+  <div class="split-2">
+    <div class="panel list-card">
+      <h3>What worked · Eugene</h3>
+      <ul>
+        <li>Faster aerobic baseline (median easy 8:15 vs 8:42 / 9:00 prior)</li>
+        <li>Shamrock HM PR as fitness check ~6 weeks out</li>
+        <li>Two continuous 20 mi longs at ~8:04–8:14 — not 22+ slogs</li>
+        <li>Cleaner late taper (final build week 60% of peak)</li>
+        <li>Stacked marathon experience / durability</li>
+      </ul>
+    </div>
+    <div class="panel list-card bad">
+      <h3>What didn't</h3>
+      <ul>
+        <li>Zero midweek MLR ≥10 across all four builds</li>
+        <li>Never reached 50 mpw — Tucson 50–55 still uncharted</li>
+        <li>Boom-bust weeks (stdev ~9–11 mpw)</li>
+        <li>Debut 22.4 mi long did not help (4:27)</li>
+        <li>Gray-zone easies (fast pace + HR 155–158)</li>
+        <li>Post-tune-up recovery cliffs (Eugene W09 = 10.1 mpw)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="panel list-card opp" style="margin-top:1rem">
+    <h3>Tucson opportunities</h3>
+    <ul>
+      <li>Add Wed MLR 10–14 to hit 50–55 without Sunday &gt;20</li>
+      <li>Easy discipline: 8:45–9:30 conversational (not 8:15 gray zone)</li>
+      <li>Downhill / eccentric prep for net downhill course</li>
+      <li>Fuel longs/MP at 60–90 g CHO/h — gut train</li>
+      <li>Race-day shoe + long-run shoe continuity</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block wrap" id="rules">
+  <div class="eyebrow">07 · Coach rules</div>
+  <h2 class="display">What Potato enforces</h2>
+  <p class="lede">Non-negotiables from the postmortem + COACH_LOOP. Red days are a veto, not a suggestion.</p>
+  <div class="rules">
+    <div class="rule"><span class="tag ban">BAN</span><p>Week-to-week volume jump &gt;25–30%</p></div>
+    <div class="rule"><span class="tag ban">BAN</span><p>Sunday long &gt;20 mi — extend volume via midweek MLR first</p></div>
+    <div class="rule"><span class="tag enf">ENFORCE</span><p>Easy pace floor: warn if non-quality runs avg faster than ~8:40 with HR ≥155</p></div>
+    <div class="rule"><span class="tag req">REQUIRE</span><p>≥1 named quality (T or MP continuous) most weeks in specific/peak</p></div>
+    <div class="rule"><span class="tag gate">GATE</span><p>Red Oura / niggle: no MP or intervals</p></div>
+    <div class="rule"><span class="tag cut">CUTBACK</span><p>Every 3rd–4th week 10–20% volume</p></div>
+    <div class="rule"><span class="tag req">AFTER</span><p>Tune-up race: planned rebuild week — not accidental 10 mpw hole</p></div>
+    <div class="rule"><span class="tag fuel">FUEL</span><p>Mandate on all ≥90 min / any MP block: 60–90 g CHO/h</p></div>
+  </div>
+</section>
+
+<section class="block wrap" id="registration">
+  <div class="eyebrow">08 · Locked in</div>
+  <h2 class="display">Registration &amp; kit</h2>
+  <div class="reg">
+    <div>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--sand-mute)">Confirmation</div>
+      <div class="reg-conf">60337063</div>
+      <div class="reg-d">
+        <strong>Paid</strong> · Men's M shirt · bus registered · solo default (Abbie TBD)<br/>
+        Race Sun Dec 13 · 7:20 AM · Biosphere 2<br/>
+        Packet Sat Dec 12 · 11am–6pm · PCC NW<br/>
+        Bus: Olive Garden, Oro Valley Marketplace · 5:00–6:15 AM
+      </div>
+    </div>
+    <div class="shoe">
+      <h3>Shoe note</h3>
+      <p><strong style="color:var(--sand)">ASICS Novablast 6</strong> ordered. Lock race shoe early — key MP segments + at least one long in race shoe ≥3 weeks out. Ban brand-new shoe debut on race morning.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="b">Potato · Tucson ′26</div>
+  <div>Evidence-based sub-3:15 stretch · Blake J. Graham · Sep 2026</div>
+  <div style="margin-top:0.35rem">Sources: potato-corpus · Exa · Strava sync · Aravaipa course materials</div>
+</footer>
+</body>
+</html>
